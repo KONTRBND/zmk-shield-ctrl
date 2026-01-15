@@ -1,0 +1,6 @@
+name: zmk-shield-ctrl
+build:
+  depends:
+    - zephyr-display-nv3030b
+  settings:
+    board_root: .

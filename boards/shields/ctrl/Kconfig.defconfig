@@ -1,0 +1,13 @@
+if SHIELD_CTRL
+
+config ZMK_KEYBOARD_NAME
+    default "CTRL 3x4"
+
+if SHIELD_CTRL_DISPLAY
+config DISPLAY
+    default y
+config ZMK_DISPLAY
+    default y
+endif
+
+endif

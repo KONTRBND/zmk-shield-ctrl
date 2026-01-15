@@ -1,0 +1,9 @@
+file_format: "1"
+id: ctrl
+name: Ctrl 3x4
+description: "CTRL Project Shield"
+type: shield
+url: https://github.com/KONTRBND/ZMK-SHIELD-CTRL
+features:
+  - keys
+  - display

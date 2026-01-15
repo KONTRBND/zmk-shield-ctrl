@@ -1,0 +1,8 @@
+manifest:
+  remotes:
+    - name: zephyr-display-nv3030b
+      url-base: https://github.com/KONTRBND
+  projects:
+    - name: zephyr-display-nv3030b
+      remote: zephyr-display-nv3030b
+      import: west.yml

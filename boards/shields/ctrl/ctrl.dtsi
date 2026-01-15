@@ -1,0 +1,6 @@
+/ {
+    kbd {
+        compatible = "zmk,keyboard";
+        matrix-transform = <&default_transform>;
+    };
+};

@@ -1,0 +1,10 @@
+config SHIELD_CTRL
+    def_bool $(shields_list_contains,ctrl)
+
+if SHIELD_CTRL
+
+config SHIELD_CTRL_DISPLAY
+    bool "Enable CTRL display"
+    default y
+
+endif

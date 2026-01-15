@@ -16,6 +16,37 @@ Other boards, including other XIAO variants, are not unsupported.
 Pin assignments, SPI usage, and GPIO access are tightly coupled to the XIAO nRF52840.  
 Using this shield on a different board will require modifications and is not expected to work out of the box.
 
+## Integration with a ZMK Config
+
+To use this shield in a `zmk-config` repository, it must be added as an external module and referenced during the build.
+
+### 1. Add the shield as a West dependency
+
+Add this repository to the `west.yml` file of your `zmk-config`:
+
+```yaml
+manifest:
+  remotes:
+    - name: kontrbnd
+      url-base: https://github.com/KONTRBND
+  projects:
+    - name: zmk-shield-ctrl
+      remote: kontrbnd
+      revision: main
+```
+
+If your config already uses other external modules, merge this entry into the existing manifest.
+
+### 2. Enable the shield in your build
+
+When building ZMK, specify the shield explicitly:
+
+```sh
+west build -b seeed_xiao_nrf52840 -- -DSHIELD=ctrl
+```
+
+If you are using a GitHub-Actions-based build, add `ctrl` to the `shield` field of the corresponding job.
+
 ## Features
 
 - 3x4 key matrix (12 keys)

@@ -7,3 +7,5 @@ url: https://github.com/KONTRBND/ZMK-SHIELD-CTRL
 features:
   - keys
   - display
+requires:
+  - seeed_xiao
